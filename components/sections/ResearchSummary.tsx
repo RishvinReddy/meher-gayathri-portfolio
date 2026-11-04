@@ -15,12 +15,13 @@ import { profileData } from "@/content/profile";
 
 export default function ResearchSummary() {
   const iconMap: Record<string, React.ReactNode> = {
-    ShieldCheck: <ShieldCheck className="w-6 h-6 text-[#5B7260]" />,
-    Scale: <Scale className="w-6 h-6 text-[#5B7260]" />,
-    Blocks: <Blocks className="w-6 h-6 text-[#5B7260]" />,
-    Lock: <Lock className="w-6 h-6 text-[#5B7260]" />,
-    Cpu: <Cpu className="w-6 h-6 text-[#5B7260]" />,
-    Eye: <Eye className="w-6 h-6 text-[#5B7260]" />
+    "information-security": <ShieldCheck className="w-6 h-6 text-[#5B7260]" />,
+    "cybersecurity-grc": <Scale className="w-6 h-6 text-[#5B7260]" />,
+    "blockchain-security": <Blocks className="w-6 h-6 text-[#5B7260]" />,
+    "privacy": <Lock className="w-6 h-6 text-[#5B7260]" />,
+    "iot-security": <Cpu className="w-6 h-6 text-[#5B7260]" />,
+    "visual-cryptography": <Eye className="w-6 h-6 text-[#5B7260]" />,
+    "online-voting": <Blocks className="w-6 h-6 text-[#5B7260]" />
   };
 
   return (
@@ -54,7 +55,7 @@ export default function ResearchSummary() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="w-12 h-12 rounded-lg bg-[#EBF0EC] border border-[#CBD7CE] flex items-center justify-center group-hover:bg-[#DEE7DF] transition-colors">
-                    {iconMap[area.icon] || <ShieldCheck className="w-6 h-6 text-[#5B7260]" />}
+                    {iconMap[area.id] || <ShieldCheck className="w-6 h-6 text-[#5B7260]" />}
                   </div>
                   <span className="text-xs font-mono text-[#7E8580]">
                     0{idx + 1}
@@ -73,7 +74,7 @@ export default function ResearchSummary() {
               <div className="pt-6 mt-4 border-t border-[#ECE6DC] flex items-center justify-between text-xs text-[#7E8580]">
                 <span className="font-medium text-[#5B7260]">Peer Investigation</span>
                 <Link
-                  href={`/research#${area.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                  href={`/research#${area.id}`}
                   className="font-semibold text-[#292D2A] hover:text-[#5B7260] flex items-center space-x-1"
                 >
                   <span>Explore</span>

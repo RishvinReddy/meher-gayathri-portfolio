@@ -40,31 +40,24 @@ export default function VerificationDisclosure() {
               <tbody className="divide-y divide-[#ECE6DC] text-[#3D4440]">
                 {profileData.verificationChecklist.map((item, idx) => {
                   const isVerified = item.status === "verified";
-                  const isPending = item.status === "pending-clarification";
-                  const isConfirmed = item.status === "author-confirmed";
+                  const isPending = item.status === "pending-author-clarification";
 
                   return (
                     <tr key={idx} className="hover:bg-[#F3EFE8]/50 transition-colors">
                       <td className="py-3.5 pr-4 font-medium text-[#292D2A]">{item.category}</td>
                       <td className="py-3.5 px-4 font-semibold">{item.item}</td>
-                      <td className="py-3.5 px-4 text-[#575E59]">{item.source}</td>
+                      <td className="py-3.5 px-4 text-[#575E59]">{item.documentedSource}</td>
                       <td className="py-3.5 px-4 whitespace-nowrap">
                         {isVerified && (
                           <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#EBF0EC] text-[#3B5340] border border-[#CBD7CE]">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#5B7260]" />
-                            <span>Verified</span>
+                            <span>Documented & Verified</span>
                           </span>
                         )}
                         {isPending && (
                           <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#FAF2E6] text-[#7A5A2B] border border-[#E8D6BF]">
                             <Clock className="w-3.5 h-3.5 text-[#A87432]" />
-                            <span>Clarified</span>
-                          </span>
-                        )}
-                        {isConfirmed && (
-                          <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#F4EFE6] text-[#4F5651] border border-[#DCD3C4]">
-                            <FileText className="w-3.5 h-3.5 text-[#5B7260]" />
-                            <span>CV Confirmed</span>
+                            <span>Pending Author Clarification</span>
                           </span>
                         )}
                       </td>

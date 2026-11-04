@@ -1,89 +1,87 @@
-export interface AchievementItem {
+export interface Achievement {
   id: string;
   title: string;
-  category: "Academic & Technical" | "Leadership & Professional" | "Social Responsibility (CSR)" | "Co-Curricular";
-  year?: string;
+  category: "Academic & Technical" | "Leadership & Professional" | "ERS / CSR & Volunteering" | "Cultural & Sports";
+  period?: string;
   organization?: string;
   description: string;
-  highlight?: string;
+  sourceNote?: string;
 }
 
-export const achievementsData: AchievementItem[] = [
+export const achievementsData: Achievement[] = [
   {
-    id: "tech-recognitions",
+    id: "collegiate-recognitions",
     title: "25+ College-Level Recognitions in Technical Events & Project Exhibitions",
     category: "Academic & Technical",
-    organization: "Collegiate & Inter-University Technical Symposia",
-    description: "Awarded over 25 distinct accolades across competitive technical symposiums, coding challenges, project exhibitions, and innovation hackathons throughout academic tenures.",
-    highlight: "25+ Awards"
+    organization: "Collegiate & Inter-University Technical Competitions",
+    description: "Earned more than 25 recognitions across technical events, project exhibitions, and collegiate technical symposiums throughout academic studies.",
+    sourceNote: "Documented in Resume under Achievements."
   },
   {
     id: "omics-revenue",
-    title: "Program Management & International Conference Commercial Milestone",
+    title: "Generated Revenue Exceeding $50,000 within Three Months at Omics International",
     category: "Leadership & Professional",
-    year: "2018",
-    organization: "Omics International",
-    description: "Directed international scientific conference operations, journal marketing, and author/delegate communications, generating commercial sponsorship and registration revenue exceeding $50,000 within a 3-month operational window.",
-    highlight: "$50K+ Revenue Generated"
+    period: "Feb 2018 – May 2018",
+    organization: "Omics International, India",
+    description: "As Program Manager managing scientific conferences, journal-related activities, SEO, digital marketing, and stakeholder communications, generated company revenue exceeding $50,000 within three months.",
+    sourceNote: "Documented in Resume under Work Experience (Omics International) & Achievements."
   },
   {
-    id: "indian-youth-conclave",
-    title: "Committee Member — Indian Youth Conclave",
+    id: "youth-conclave",
+    title: "Committee Member — Indian Youth Conclave, Chennai",
     category: "Leadership & Professional",
-    organization: "Indian Youth Conclave, Chennai Chapter",
-    description: "Served on the executive steering committee coordinating regional youth leadership conventions, speaker curation, youth entrepreneurship sessions, and cross-institutional delegate engagement.",
-    highlight: "Executive Committee"
+    organization: "Indian Youth Conclave, Chennai",
+    description: "Contributed as a Committee Member in organizing and coordinating youth conclave initiatives and events in Chennai.",
+    sourceNote: "Documented in Resume under Achievements."
   },
   {
     id: "tech-club-vp",
-    title: "Vice President Marketing — Tech Club",
+    title: "Vice President Marketing — Tech Club, SRM University",
     category: "Leadership & Professional",
-    organization: "SRM Institute of Science and Technology",
-    description: "Headed strategic outreach, corporate partnerships, and campus-wide communications for the university's premier technology association, driving record attendance across technical symposiums.",
-    highlight: "VP Marketing"
+    organization: "Tech Club, SRM Institute of Science and Technology",
+    description: "Served as Vice President of Marketing for the Tech Club at SRM University, leading marketing initiatives, student engagement, and technical event outreach.",
+    sourceNote: "Documented in Resume under Achievements."
   },
   {
-    id: "erudite-membership",
-    title: "Active Member — ERUDITE Literary & Intellectual Forum",
+    id: "erudite-member",
+    title: "Member — ERUDITE",
     category: "Leadership & Professional",
     organization: "ERUDITE",
-    description: "Contributed to academic discourse, debate moderation, and intellectual forums promoting critical thinking, policy analysis, and multidisciplinary student dialogues.",
-    highlight: "Forum Member"
+    description: "Active member of ERUDITE, participating in academic and student intellectual forums.",
+    sourceNote: "Documented in Resume under Achievements."
   },
   {
-    id: "blue-cross-csr",
-    title: "Animal Welfare & Rehabilitation Volunteer",
-    category: "Social Responsibility (CSR)",
-    year: "2017",
+    id: "blue-cross-volunteer",
+    title: "Volunteer — Blue Cross of India (2017)",
+    category: "ERS / CSR & Volunteering",
+    period: "2017",
     organization: "Blue Cross of India",
-    description: "Volunteered in rescue logistics, veterinary care support, and public outreach drives advocating for animal rights, ethical treatment, and community shelter assistance.",
-    highlight: "Animal Welfare Advocacy"
+    description: "Volunteered in community animal welfare, rehabilitation, and awareness programs.",
+    sourceNote: "Documented in Resume under ERS / CSR & Volunteering."
   },
   {
     id: "walk-for-water",
-    title: "Community Water Conservation Campaigner",
-    category: "Social Responsibility (CSR)",
-    year: "2017",
-    organization: "Walk for Water Campaign, Chennai",
-    description: "Mobilized citizen participation and educational workshops focused on rainwater harvesting, ground-water replenishment, and sustainable urban watershed stewardship in water-stressed regions.",
-    highlight: "Resource Sustainability"
+    title: "Volunteer — Walk for Water, Chennai (2017)",
+    category: "ERS / CSR & Volunteering",
+    period: "2017",
+    organization: "Walk for Water, Chennai",
+    description: "Volunteered in public awareness campaigns advocating for clean water access and water resource conservation.",
+    sourceNote: "Documented in Resume under ERS / CSR & Volunteering."
   },
   {
-    id: "sustainability-ethics",
-    title: "Institutional ERS & Ethics Initiatives Coordinator",
-    category: "Social Responsibility (CSR)",
-    organization: "Academic Institutions & Youth Groups",
-    description: "Organized ethical computing roundtables and environmental sustainability drives, fostering student awareness regarding e-waste lifecycle management, data privacy ethics, and corporate social accountability.",
-    highlight: "Ethics & Sustainability"
+    id: "sustainability-initiatives",
+    title: "Organized Sustainability and Ethics Initiatives",
+    category: "ERS / CSR & Volunteering",
+    description: "Organized sustainability and ethics initiatives, led awareness and community engagement programs, and collaborated with diverse stakeholders to execute projects.",
+    sourceNote: "Documented in Resume under ERS / CSR & Volunteering."
   },
   {
     id: "stringz-fest",
-    title: "Inter-Collegiate Sports Merit — Carroms Runner-Up",
-    category: "Co-Curricular",
-    year: "2015 & 2016",
-    organization: "STRINGZ Cultural & Sports Festival",
-    description: "Secured Second Position consecutively in 2015 and 2016 in the competitive indoor games championship.",
-    highlight: "Second Position (2015 & 2016)"
+    title: "Second Position — Carroms, STRINGZ Cultural Fest (2015 & 2016)",
+    category: "Cultural & Sports",
+    period: "2015 & 2016",
+    organization: "STRINGZ Cultural Fest",
+    description: "Achieved Second Position in Carroms at the STRINGZ Cultural Fest in two consecutive editions (2015 and 2016).",
+    sourceNote: "Documented in Resume under Achievements."
   }
 ];
-

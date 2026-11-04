@@ -57,10 +57,10 @@ export default function AchievementsSection() {
               Executive Achievement
             </div>
             <h3 className="font-serif text-2xl font-bold text-[#292D2A]">
-              $50K+ Revenue Generated
+              $50K+ Conference Revenue
             </h3>
             <p className="text-sm text-[#575E59] leading-relaxed">
-              Achieved as Program Manager at Omics International within 3 months, orchestrating international scientific conferences and academic journal marketing.
+              Generated within three months managing international scientific conferences and journal operations at Omics International.
             </p>
             <div className="pt-2 text-xs text-[#7E8580] border-t border-[#ECE6DC]">
               Omics International · Program Management

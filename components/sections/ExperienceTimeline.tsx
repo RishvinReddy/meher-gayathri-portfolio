@@ -26,7 +26,7 @@ export default function ExperienceTimeline() {
                   {/* Timeline bullet */}
                   <div
                     className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full border-2 ${
-                      apt.isCurrent
+                      apt.period.includes("Present")
                         ? "bg-[#5B7260] border-[#F8F6F0] ring-4 ring-[#CBD7CE]"
                         : "bg-[#E8E1D5] border-[#575E59]"
                     }`}
