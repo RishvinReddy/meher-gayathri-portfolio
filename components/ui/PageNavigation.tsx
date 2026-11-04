@@ -76,3 +76,4 @@ export default function PageNavigation({ prev, next, className = "" }: PageNavig
     </nav>
   );
 }
+

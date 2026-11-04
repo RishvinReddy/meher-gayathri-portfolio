@@ -53,8 +53,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth light" style={{ colorScheme: "light" }}>
       <head>
+        <meta name="color-scheme" content="light" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -62,8 +63,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#F8F6F0] text-[#292D2A] min-h-screen flex flex-col font-sans selection:bg-[#CBD7CE] selection:text-[#292D2A]">
-        {/* Academic top status banner */}
+      <body className="bg-[#F8F6F0] text-[#292D2A] min-h-screen flex flex-col font-sans selection:bg-[#CBD7CE] selection:text-[#292D2A] antialiased">
+        {/* Academic top status banner (Warm, understated, light-only) */}
         <div className="bg-[#ECE6DC] text-[#4F5651] text-xs py-1.5 px-4 text-center border-b border-[#E0D7C9] font-medium tracking-wide">
           <span>Official Academic & Research Portfolio</span>
           <span className="mx-2 opacity-50">·</span>

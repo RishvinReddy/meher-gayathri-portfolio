@@ -2,26 +2,59 @@
 
 @layer base {
   :root {
+    color-scheme: light;
+    
+    /* Warm Ivory & Sand Canvas */
     --bg-ivory: #F8F6F0;
     --bg-ivory-light: #FDFAF5;
+    --bg-ivory-paper: #FAF8F3;
     --bg-sand: #E8E1D5;
     --bg-sand-light: #F4EFE6;
-    --bg-sand-card: #FAF8F3;
+    --bg-sand-muted: #EDE6D9;
     
+    /* Charcoal Typography (Strict Light Theme) */
     --text-charcoal: #292D2A;
     --text-charcoal-muted: #575E59;
     --text-charcoal-light: #7E8580;
+    --text-charcoal-subtle: #98A09A;
     
+    /* Muted Sage Accents */
     --accent-sage: #849987;
     --accent-sage-dark: #5B7260;
+    --accent-sage-deep: #435547;
     --accent-sage-light: #EBF0EC;
+    --accent-sage-soft: #F2F5F3;
     --accent-sage-border: #CBD7CE;
     
+    /* Editorial Borders & Rules */
     --border-warm: #E2DBD0;
     --border-delicate: #ECE6DC;
+    --border-strong: #D5CCC0;
 
+    /* Fonts */
     --font-serif: "Newsreader", "Charter", "Cormorant Garamond", Georgia, serif;
     --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Force light theme regardless of OS/Browser dark mode settings */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light;
+      --bg-ivory: #F8F6F0;
+      --bg-ivory-light: #FDFAF5;
+      --bg-ivory-paper: #FAF8F3;
+      --bg-sand: #E8E1D5;
+      --bg-sand-light: #F4EFE6;
+      --text-charcoal: #292D2A;
+      --text-charcoal-muted: #575E59;
+      --text-charcoal-light: #7E8580;
+    }
+  }
+
+  html {
+    color-scheme: light !important;
+    background-color: var(--bg-ivory);
+    color: var(--text-charcoal);
   }
 
   body {
@@ -30,31 +63,34 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color-scheme: light !important;
   }
 
   h1, h2, h3, h4, .font-serif {
     font-family: var(--font-serif);
+    letter-spacing: -0.015em;
   }
 
   ::selection {
     background-color: #DDE5E0;
     color: #292D2A;
   }
+
+  /* Accessible outline focus ring */
+  *:focus-visible {
+    outline: 2px solid var(--accent-sage-dark);
+    outline-offset: 2px;
+  }
 }
 
-/* Editorial typography utilities */
-.font-serif-title {
-  font-family: var(--font-serif), "Newsreader", "Playfair Display", Georgia, serif;
-  letter-spacing: -0.015em;
-}
-
-.editorial-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #D4CBBC 20%, #D4CBBC 80%, transparent);
+/* Warm Editorial Academic Custom Classes */
+.editorial-paper {
+  background-color: var(--bg-ivory-paper);
+  border: 1px solid var(--border-delicate);
 }
 
 .editorial-card {
-  background: #FAF8F4;
+  background-color: #FAF8F3;
   border: 1px solid #E8E1D5;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -62,11 +98,35 @@
 .editorial-card:hover {
   border-color: #849987;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -8px rgba(41, 45, 42, 0.05);
+  box-shadow: 0 12px 28px -10px rgba(41, 45, 42, 0.07);
 }
 
-.editorial-badge {
+.editorial-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D5CCC0 15%, #D5CCC0 85%, transparent);
+}
+
+.editorial-tag {
+  background-color: #F4EFE6;
+  border: 1px solid #E0D7C9;
+  color: #3D4440;
+}
+
+.editorial-tag-sage {
   background-color: #EBF0EC;
+  border: 1px solid #CBD7CE;
   color: #3B5340;
-  border: 1px solid #D1DDD3;
+}
+
+/* Restrained drop cap for narrative biography */
+.editorial-dropcap::first-letter {
+  font-family: var(--font-serif);
+  float: left;
+  font-size: 3.5rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  color: #5B7260;
+  font-weight: 700;
 }

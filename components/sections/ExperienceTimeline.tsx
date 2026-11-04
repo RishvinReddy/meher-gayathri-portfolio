@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Briefcase, GraduationCap, MapPin, CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
+import { GraduationCap, MapPin, AlertCircle, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { profileData } from "@/content/profile";
 
@@ -32,7 +32,7 @@ export default function ExperienceTimeline() {
                     }`}
                   />
 
-                  <div className="bg-[#FAF8F3] border border-[#E8E1D5] hover:border-[#849987] rounded-xl p-6 transition-all shadow-2xs space-y-3">
+                  <div className="bg-[#FAF8F3] border border-[#E8E1D5] hover:border-[#849987] rounded-2xl p-6 transition-all shadow-2xs space-y-3">
                     
                     <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[#ECE6DC] pb-3">
                       <div>
@@ -44,7 +44,7 @@ export default function ExperienceTimeline() {
                         </div>
                       </div>
                       <div className="text-right">
-                        <span className="inline-block px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-[#EBF0EC] text-[#3B5340] border border-[#CBD7CE]">
+                        <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-[#EBF0EC] text-[#3B5340] border border-[#CBD7CE]">
                           {apt.period}
                         </span>
                         <div className="text-xs text-[#7E8580] flex items-center justify-end space-x-1 mt-1">
@@ -56,10 +56,10 @@ export default function ExperienceTimeline() {
 
                     {/* Verification note if applicable */}
                     {apt.verificationNote && (
-                      <div className="p-2.5 rounded bg-[#FAF2E6] border border-[#E8D6BF] text-xs text-[#7A5A2B] flex items-start space-x-2">
+                      <div className="p-3 rounded-xl bg-[#FAF2E6] border border-[#E8D6BF] text-xs text-[#7A5A2B] flex items-start space-x-2">
                         <AlertCircle className="w-4 h-4 text-[#A87432] shrink-0 mt-0.5" />
                         <div>
-                          <strong className="font-semibold">Verification Clarification: </strong>
+                          <strong className="font-semibold">Documented Date Note: </strong>
                           {apt.verificationNote}
                         </div>
                       </div>
@@ -76,9 +76,9 @@ export default function ExperienceTimeline() {
                     {apt.achievements && apt.achievements.length > 0 && (
                       <div className="pt-3 border-t border-[#ECE6DC]">
                         <div className="text-[11px] uppercase tracking-wider font-semibold text-[#7E8580] mb-1.5">
-                          Key Milestone
+                          Documented Achievement
                         </div>
-                        <div className="text-xs text-[#3D4440] font-medium bg-[#F4EFE6] px-3 py-2 rounded border border-[#E8E1D5]">
+                        <div className="text-xs text-[#3D4440] font-medium bg-[#F4EFE6] px-3 py-2 rounded-lg border border-[#E8E1D5]">
                           {apt.achievements[0]}
                         </div>
                       </div>
@@ -94,7 +94,7 @@ export default function ExperienceTimeline() {
           <div className="lg:col-span-5 space-y-8">
             <SectionHeading
               kicker="Scholarly Credentials"
-              title="Education & Degrees"
+              title="Education & Qualifications"
               subtitle="Formal engineering and research qualifications in Information Security and Information Technology."
               className="mb-8"
             />
@@ -103,11 +103,11 @@ export default function ExperienceTimeline() {
               {profileData.education.map((edu, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#FAF8F3] border border-[#E8E1D5] rounded-xl p-6 space-y-3 relative overflow-hidden"
+                  className="bg-[#FAF8F3] border border-[#E8E1D5] rounded-2xl p-6 space-y-3 relative overflow-hidden"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 rounded-lg bg-[#EBF0EC] border border-[#CBD7CE] flex items-center justify-center text-[#5B7260]">
+                      <div className="w-10 h-10 rounded-xl bg-[#EBF0EC] border border-[#CBD7CE] flex items-center justify-center text-[#5B7260]">
                         <GraduationCap className="w-5 h-5" />
                       </div>
                       <div>
@@ -120,17 +120,17 @@ export default function ExperienceTimeline() {
                       </div>
                     </div>
 
-                    <span className="px-2.5 py-0.5 rounded text-xs font-mono font-medium bg-[#E8E1D5] text-[#292D2A]">
+                    <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-[#E8E1D5] text-[#292D2A]">
                       {edu.status}
                     </span>
                   </div>
 
-                  <div className="text-sm font-medium text-[#292D2A]">
+                  <div className="text-xs sm:text-sm font-medium text-[#292D2A]">
                     {edu.institution}, {edu.country}
                   </div>
 
                   {edu.notes && (
-                    <p className="text-xs text-[#575E59] leading-relaxed pt-1 border-t border-[#ECE6DC]">
+                    <p className="text-xs text-[#575E59] leading-relaxed pt-2 border-t border-[#ECE6DC]">
                       {edu.notes}
                     </p>
                   )}
@@ -139,10 +139,10 @@ export default function ExperienceTimeline() {
             </div>
 
             {/* Quick Skills Callout */}
-            <div className="p-6 rounded-xl bg-[#FAF8F3] border border-[#E2DBD0] space-y-4">
+            <div className="p-6 rounded-2xl bg-[#FAF8F3] border border-[#E2DBD0] space-y-4">
               <h4 className="font-serif text-lg font-bold text-[#292D2A] flex items-center justify-between">
                 <span>Core Competencies</span>
-                <Link href="/about" className="text-xs font-sans text-[#5B7260] hover:underline">
+                <Link href="/about" className="text-xs font-sans text-[#5B7260] hover:underline font-semibold">
                   Full Matrix →
                 </Link>
               </h4>
@@ -156,12 +156,11 @@ export default function ExperienceTimeline() {
                   "Malware Analysis",
                   "SIEM & SOC",
                   "Prompt Engineering",
-                  "Curriculum Planning",
                   "Mendeley & LaTeX"
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="text-xs px-2.5 py-1 rounded bg-[#F4EFE6] border border-[#E0D7C9] text-[#3D4440]"
+                    className="text-xs px-2.5 py-1 rounded-md bg-[#F4EFE6] border border-[#E0D7C9] text-[#3D4440]"
                   >
                     {skill}
                   </span>
@@ -177,4 +176,3 @@ export default function ExperienceTimeline() {
     </section>
   );
 }
-

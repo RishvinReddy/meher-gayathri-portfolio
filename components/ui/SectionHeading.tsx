@@ -18,25 +18,24 @@ export default function SectionHeading({
   const isCenter = align === "center";
 
   return (
-    <div className={`mb-12 ${isCenter ? "text-center max-w-3xl mx-auto" : "max-w-3xl"} ${className}`}>
+    <div className={`mb-10 sm:mb-12 ${isCenter ? "text-center max-w-3xl mx-auto" : "max-w-3xl"} ${className}`}>
       {kicker && (
         <div className="inline-flex items-center space-x-2 mb-3">
-          <span className="h-px w-6 bg-[#849987]"></span>
+          <span className="h-px w-5 bg-[#849987]"></span>
           <span className="text-xs uppercase tracking-widest font-semibold text-[#5B7260]">
             {kicker}
           </span>
-          {isCenter && <span className="h-px w-6 bg-[#849987]"></span>}
+          {isCenter && <span className="h-px w-5 bg-[#849987]"></span>}
         </div>
       )}
-      <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#292D2A] leading-[1.15]">
+      <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#292D2A] leading-[1.14]">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base sm:text-lg text-[#575E59] leading-relaxed font-normal">
+        <p className="mt-3.5 text-base sm:text-lg text-[#575E59] leading-relaxed font-normal">
           {subtitle}
         </p>
       )}
     </div>
   );
 }
-
