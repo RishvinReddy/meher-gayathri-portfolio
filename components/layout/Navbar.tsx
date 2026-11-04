@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Mail } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,12 +18,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile drawer on route change
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
-  // Handle escape key to close menu
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -33,7 +30,7 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const primaryNav = [
+  const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Research", href: "/research" },
@@ -53,44 +50,32 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-18 sm:h-20">
           
-          {/* Brand Wordmark with Portrait Thumbnail */}
+          {/* Typographic Wordmark (Academic, Refined) */}
           <Link
             href="/"
-            className="group flex items-center space-x-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5B7260] rounded-lg py-1"
+            className="group flex flex-col text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5B7260] rounded-sm py-1"
           >
-            <div className="relative w-11 h-11 rounded-full overflow-hidden border border-[#849987] bg-[#EBF0EC] shrink-0 shadow-2xs group-hover:ring-2 group-hover:ring-[#849987]/60 transition-all">
-              <Image
-                src="/images/profile.jpg"
-                alt="Meher Gayatri Devi Tiwari"
-                fill
-                sizes="44px"
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl font-bold text-[#292D2A] tracking-tight group-hover:text-[#5B7260] transition-colors leading-tight">
-                Meher Gayatri Devi Tiwari
-              </span>
-              <span className="text-[11px] text-[#575E59] tracking-wider uppercase font-medium mt-0.5">
-                Cybersecurity · Academia · Research
-              </span>
-            </div>
+            <span className="font-serif text-lg sm:text-xl font-bold text-[#292D2A] tracking-tight group-hover:text-[#5B7260] transition-colors leading-tight">
+              Meher Gayatri Devi Tiwari
+            </span>
+            <span className="text-[11px] text-[#575E59] tracking-wider uppercase font-medium mt-0.5">
+              Assistant Professor & Information Security Researcher
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-1" aria-label="Main Navigation">
-            {primaryNav.map((link) => {
+          <nav className="hidden lg:flex items-center space-x-1" aria-label="Main Navigation">
+            {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all ${
+                  className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-all ${
                     isActive
-                      ? "text-[#292D2A] bg-[#E8E1D5] border border-[#D5CCC0] shadow-2xs"
+                      ? "text-[#292D2A] bg-[#E8E1D5] border border-[#D5CCC0]"
                       : "text-[#575E59] hover:text-[#292D2A] hover:bg-[#E8E1D5]/40"
                   }`}
                   aria-current={isActive ? "page" : undefined}
@@ -101,19 +86,19 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Desktop Secondary Action */}
-          <div className="hidden xl:flex items-center space-x-3">
+          {/* Desktop Direct Contact CTA */}
+          <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 text-xs font-semibold text-[#292D2A] bg-[#EBF0EC] hover:bg-[#DEE7DF] border border-[#CBD7CE] rounded-lg transition-all shadow-2xs"
+              className="inline-flex items-center space-x-1 px-3.5 py-1.5 text-xs font-semibold text-[#292D2A] bg-[#EBF0EC] hover:bg-[#DEE7DF] border border-[#CBD7CE] rounded-md transition-all"
             >
-              <Mail className="w-3.5 h-3.5 text-[#5B7260]" />
-              <span>Contact</span>
+              <span>Get in Touch</span>
+              <ArrowUpRight className="w-3 h-3 text-[#5B7260]" />
             </Link>
           </div>
 
-          {/* Mobile & Tablet Hamburger Button */}
-          <div className="xl:hidden flex items-center">
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -128,13 +113,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer (Strictly Light-Theme) */}
+      {/* Mobile Drawer (Strictly Light Theme) */}
       {isOpen && (
-        <div className="xl:hidden border-b border-[#E8E1D5] bg-[#FAF8F3] px-4 pt-3 pb-6 space-y-1 shadow-lg animate-in slide-in-from-top duration-200">
+        <div className="lg:hidden border-b border-[#E8E1D5] bg-[#FAF8F3] px-4 pt-3 pb-6 space-y-1 shadow-md animate-in slide-in-from-top duration-200">
           <div className="pb-2 mb-2 border-b border-[#E8E1D5] text-[11px] uppercase tracking-wider font-semibold text-[#7E8580] px-3">
-            Academic Portfolio Directory
+            Academic Directory
           </div>
-          {primaryNav.map((link) => {
+          {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
@@ -153,10 +138,10 @@ export default function Navbar() {
           <div className="pt-3 border-t border-[#ECE6DC]">
             <Link
               href="/contact"
-              className="flex items-center justify-center space-x-2 w-full py-2.5 text-xs font-semibold uppercase tracking-wider text-[#292D2A] bg-[#EBF0EC] border border-[#CBD7CE] rounded-lg shadow-2xs hover:bg-[#DEE7DF] transition-colors"
+              className="flex items-center justify-center space-x-1.5 w-full py-2.5 text-xs font-semibold uppercase tracking-wider text-[#292D2A] bg-[#EBF0EC] border border-[#CBD7CE] rounded-lg hover:bg-[#DEE7DF] transition-colors"
             >
-              <Mail className="w-3.5 h-3.5 text-[#5B7260]" />
-              <span>Send Professional Inquiry</span>
+              <span>Get in Touch</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#5B7260]" />
             </Link>
           </div>
         </div>
