@@ -42,7 +42,7 @@ export default function Footer() {
   return (
     <footer
       aria-label="Site Footer"
-      className="bg-[#292D2A] text-[#F8F6F0] border-t border-[rgba(248,246,240,0.14)] mt-24 relative z-10"
+      className="bg-[#141615] text-[#F8F6F0] border-t border-[rgba(248,246,240,0.10)] mt-24 relative z-10"
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
@@ -106,10 +106,10 @@ export default function Footer() {
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-lg bg-[#F8F6F0] hover:bg-white text-[#292D2A] text-xs font-semibold uppercase tracking-wider transition-all focus-visible:ring-2 focus-visible:ring-[#A5B6A5] focus-visible:outline-none shadow-sm group"
+                  className="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-lg bg-[#F8F6F0] hover:bg-white text-[#141615] text-xs font-semibold uppercase tracking-wider transition-all focus-visible:ring-2 focus-visible:ring-[#A5B6A5] focus-visible:outline-none shadow-sm group"
                 >
                   <span>Contact Office</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#292D2A] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#141615] group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <a
