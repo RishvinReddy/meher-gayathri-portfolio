@@ -30,7 +30,7 @@ export default function ContactPage() {
 
   return (
     <div className="py-10 sm:py-14 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 space-y-16">
         
         {/* Page Header */}
         <PageHeader
@@ -152,7 +152,7 @@ export default function ContactPage() {
         </div>
 
         {/* Telephone & Correspondence Protocol */}
-        <div className="bg-[#FAF8F3] border border-[#E2DBD0] rounded-2xl p-8 sm:p-10 space-y-6 max-w-4xl mx-auto">
+        <div className="bg-[#FAF8F3] border border-[#E2DBD0] rounded-2xl p-8 sm:p-10 space-y-6 max-w-5xl mx-auto">
           <div className="border-b border-[#ECE6DC] pb-4">
             <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#292D2A]">
               Academic Inquiry Protocol

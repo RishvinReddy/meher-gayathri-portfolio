@@ -9,7 +9,7 @@ export default function FeaturedProjects() {
 
   return (
     <section id="work" className="py-16 sm:py-20 lg:py-24 bg-[#FAF8F3] border-b border-[#ECE6DC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <SectionHeading
@@ -29,7 +29,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8 xl:gap-10">
           {featured.map((project, idx) => (
             <article
               key={project.id}

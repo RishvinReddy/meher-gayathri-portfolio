@@ -38,7 +38,7 @@ export default function PublicationsPage() {
 
   return (
     <div className="py-10 sm:py-14 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 space-y-16">
         
         {/* Page Header */}
         <PageHeader

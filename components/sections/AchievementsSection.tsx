@@ -7,7 +7,7 @@ import { achievementsData } from "@/content/achievements";
 export default function AchievementsSection() {
   return (
     <section id="achievements" className="py-20 lg:py-28 bg-[#FAF8F3] border-b border-[#ECE6DC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <SectionHeading
@@ -27,7 +27,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* 3 Main Pillar Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           
           {/* Pillar 1: 25+ Awards */}
           <div className="bg-[#F8F6F0] border border-[#E8E1D5] rounded-xl p-6 sm:p-7 space-y-4">

@@ -7,7 +7,7 @@ import { profileData } from "@/content/profile";
 export default function VerificationDisclosure() {
   return (
     <section id="verification" className="py-16 lg:py-24 bg-[#F8F6F0] border-b border-[#ECE6DC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
         <div className="bg-[#FAF8F3] border border-[#E2DBD0] rounded-xl p-8 lg:p-10 space-y-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#ECE6DC] pb-6">

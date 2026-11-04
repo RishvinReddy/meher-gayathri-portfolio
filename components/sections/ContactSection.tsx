@@ -17,7 +17,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-20 lg:py-28 bg-[#FAF8F3]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
         <SectionHeading
           kicker="Scholarly & Professional Enquiries"
@@ -26,7 +26,7 @@ export default function ContactSection() {
           align="center"
         />
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 pt-6">
           
           {/* Email Card */}
           <div className="bg-[#F8F6F0] border border-[#E8E1D5] hover:border-[#849987] rounded-2xl p-6 text-center space-y-3.5 transition-all hover:-translate-y-1 hover:shadow-xs flex flex-col justify-between">

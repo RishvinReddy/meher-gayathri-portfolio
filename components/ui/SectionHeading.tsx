@@ -18,7 +18,7 @@ export default function SectionHeading({
   const isCenter = align === "center";
 
   return (
-    <div className={`mb-10 sm:mb-12 ${isCenter ? "text-center max-w-3xl mx-auto" : "max-w-3xl"} ${className}`}>
+    <div className={`mb-10 sm:mb-12 ${isCenter ? "text-center max-w-4xl mx-auto" : "max-w-4xl"} ${className}`}>
       {kicker && (
         <div className="inline-flex items-center space-x-2 mb-3">
           <span className="h-px w-5 bg-[#849987]"></span>

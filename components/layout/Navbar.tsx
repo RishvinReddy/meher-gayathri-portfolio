@@ -49,7 +49,7 @@ export default function Navbar() {
           : "bg-[#F8F6F0] border-b border-[#ECE6DC]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="flex items-center justify-between h-18 sm:h-20">
           
           {/* Typographic Wordmark (Academic, Refined) */}
@@ -57,16 +57,16 @@ export default function Navbar() {
             href="/"
             className="group flex flex-col text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5B7260] rounded-sm py-1"
           >
-            <span className="font-serif text-lg sm:text-xl font-bold text-[#292D2A] tracking-tight group-hover:text-[#5B7260] transition-colors leading-tight">
+            <span className="font-serif text-lg sm:text-xl lg:text-2xl font-bold text-[#292D2A] tracking-tight group-hover:text-[#5B7260] transition-colors leading-tight">
               Meher Gayatri Devi Tiwari
             </span>
-            <span className="text-[11px] text-[#575E59] tracking-wider uppercase font-medium mt-0.5">
+            <span className="text-[11px] sm:text-xs text-[#575E59] tracking-wider uppercase font-medium mt-0.5">
               Assistant Professor & Information Security Researcher
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (

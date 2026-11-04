@@ -38,7 +38,7 @@ export default function AboutPage() {
 
   return (
     <div className="py-10 sm:py-14 lg:py-16 bg-[#F8F6F0]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 lg:space-y-24">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 space-y-16 lg:space-y-24">
         
         {/* =========================================================================
             SECTION 1: ABOUT HERO
@@ -51,16 +51,16 @@ export default function AboutPage() {
             breadcrumbs={[{ label: "About" }]}
           />
 
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Generous Professional Portrait */}
             <div className="lg:col-span-5 flex justify-center lg:justify-start">
-              <div className="relative w-full max-w-sm sm:max-w-md p-3.5 rounded-2xl bg-[#FAF8F3] border border-[#E2DBD0] shadow-sm">
-                <div className="relative aspect-[4/5] min-h-[360px] sm:min-h-[420px] w-full rounded-xl overflow-hidden border border-[#D5CCC0] bg-[#EBF0EC]">
+              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg p-3.5 sm:p-4 rounded-3xl bg-[#FAF8F3] border border-[#E2DBD0] shadow-sm">
+                <div className="relative aspect-[4/5] min-h-[380px] sm:min-h-[460px] lg:min-h-[500px] w-full rounded-2xl overflow-hidden border border-[#D5CCC0] bg-[#EBF0EC]">
                   <Image
                     src="/images/profile.jpg"
                     alt="Meher Gayatri Devi Tiwari"
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 550px"
                     className="object-cover object-top"
                     priority
                     loading="eager"

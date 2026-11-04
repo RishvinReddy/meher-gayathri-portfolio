@@ -44,7 +44,7 @@ export default function Footer() {
       aria-label="Site Footer"
       className="bg-[#292D2A] text-[#F8F6F0] border-t border-[rgba(248,246,240,0.14)] mt-24 relative z-10"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
         {/* ==================================================================== */}
         {/* UPPER SECTION: Professional Identity & Academic Call to Action       */}
