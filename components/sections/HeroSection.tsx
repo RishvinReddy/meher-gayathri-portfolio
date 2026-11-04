@@ -108,7 +108,7 @@ export default function HeroSection() {
             <div className="relative w-full max-w-sm sm:max-w-md">
               {/* Refined Academic Framing */}
               <div className="relative p-3 rounded-2xl bg-[#FAF8F3] border border-[#E2DBD0] shadow-sm">
-                <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden border border-[#D5CCC0] bg-[#EBF0EC]">
+                <div className="relative aspect-[4/5] min-h-[360px] sm:min-h-[420px] w-full rounded-xl overflow-hidden border border-[#D5CCC0] bg-[#EBF0EC]">
                   <Image
                     src="/images/profile.jpg"
                     alt="Professional portrait of Meher Gayatri Devi Tiwari"

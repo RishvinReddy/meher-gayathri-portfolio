@@ -53,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth light" style={{ colorScheme: "light" }}>
+    <html lang="en" className="scroll-smooth light" data-scroll-behavior="smooth" style={{ colorScheme: "light" }}>
       <head>
         <meta name="color-scheme" content="light" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
