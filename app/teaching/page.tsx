@@ -23,14 +23,12 @@ import {
   Cpu,
   FolderGit2
 } from "lucide-react";
+import { generateRouteMetadata } from "@/config/seo";
 import PageHeader from "@/components/ui/PageHeader";
 import { teachingData } from "@/content/teaching";
 import { profileData } from "@/content/profile";
 
-export const metadata: Metadata = {
-  title: "Teaching & Academic Mentorship | Meher Gayatri Devi Tiwari",
-  description: "University teaching portfolio, instructional competencies, student mentorship, and curriculum development at Woxsen University and Vellore Institute of Technology.",
-};
+export const metadata: Metadata = generateRouteMetadata("/teaching");
 
 export default function TeachingPage() {
   return (

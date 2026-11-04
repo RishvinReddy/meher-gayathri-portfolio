@@ -21,16 +21,14 @@ import {
   ArrowUpRight,
   Sparkles
 } from "lucide-react";
+import { generateRouteMetadata } from "@/config/seo";
 import PageHeader from "@/components/ui/PageHeader";
 import { consolidatedThemes, researchMethodologies } from "@/content/research";
 import { projectsData } from "@/content/projects";
 import { publicationsNotice } from "@/content/publications";
 import { profileData } from "@/content/profile";
 
-export const metadata: Metadata = {
-  title: "Research Program & Scholarly Agenda | Meher Gayatri Devi Tiwari",
-  description: "Intellectual research presentation: Information Security, Cybersecurity Governance (GRC), Blockchain & Smart Contract Security, Privacy, IoT Security, and Visual Cryptography.",
-};
+export const metadata: Metadata = generateRouteMetadata("/research");
 
 export default function ResearchPage() {
   // Verified research projects

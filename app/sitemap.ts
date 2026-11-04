@@ -1,24 +1,13 @@
 import { MetadataRoute } from "next";
+import { getCanonicalOrigin, ROUTE_METADATA_MAP } from "@/config/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://mehergayatri.academic"; // Placeholder until production domain is finalized
+  const origin = getCanonicalOrigin();
 
-  const routes = [
-    "",
-    "/about",
-    "/research",
-    "/publications",
-    "/teaching",
-    "/projects",
-    "/achievements",
-    "/contact",
-  ];
-
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1.0 : 0.8,
+  return Object.values(ROUTE_METADATA_MAP).map((route) => ({
+    url: route.path === "/" ? `${origin}/` : `${origin}${route.path}`,
+    lastModified: route.lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
 }
-

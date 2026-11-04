@@ -20,15 +20,13 @@ import {
   Sparkles
 } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/Icons";
+import { generateRouteMetadata } from "@/config/seo";
 import PageHeader from "@/components/ui/PageHeader";
 import { profileData } from "@/content/profile";
 import { achievementsData } from "@/content/achievements";
 import { teachingData } from "@/content/teaching";
 
-export const metadata: Metadata = {
-  title: "About Meher Gayatri Devi Tiwari | Academic Biography & Credentials",
-  description: "Academic biography, formal qualifications, university appointments at Woxsen and VIT, research interests in visual cryptography and blockchain, and pedagogical contributions of Meher Gayatri Devi Tiwari.",
-};
+export const metadata: Metadata = generateRouteMetadata("/about");
 
 export default function AboutPage() {
   const recognitionItems = achievementsData.filter(

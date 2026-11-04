@@ -1,4 +1,6 @@
 import React from "react";
+import type { Metadata } from "next";
+import { generateRouteMetadata } from "@/config/seo";
 import HeroSection from "@/components/sections/HeroSection";
 import ResearchSummary from "@/components/sections/ResearchSummary";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
@@ -8,6 +10,8 @@ import TeachingOverview from "@/components/sections/TeachingOverview";
 import AchievementsSection from "@/components/sections/AchievementsSection";
 import VerificationDisclosure from "@/components/sections/VerificationDisclosure";
 import ContactSection from "@/components/sections/ContactSection";
+
+export const metadata: Metadata = generateRouteMetadata("/");
 
 export default function HomePage() {
   return (
@@ -24,4 +28,3 @@ export default function HomePage() {
     </>
   );
 }
-

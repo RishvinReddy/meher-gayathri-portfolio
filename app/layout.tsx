@@ -2,49 +2,48 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import {
+  getCanonicalOrigin,
+  getPersonStructuredData,
+  getWebSiteStructuredData,
+  PUBLIC_ACADEMIC_IDENTITY,
+  generateRouteMetadata,
+} from "@/config/seo";
+
+const origin = getCanonicalOrigin();
+const rootSeo = generateRouteMetadata("/");
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mehergayatritiwari.academic"),
-  title: "Meher Gayatri Devi Tiwari | Academic & Cybersecurity Portfolio",
-  description: "Academic Portfolio of Meher Gayatri Devi Tiwari — Assistant Professor at Woxsen University, Information Security Researcher, Cybersecurity & GRC Professional.",
-  keywords: [
-    "Meher Gayatri Devi Tiwari",
-    "Cybersecurity Researcher",
-    "Assistant Professor Woxsen University",
-    "Information Security",
-    "Blockchain Security",
-    "Visual Cryptography",
-    "IoT Security",
-    "Privacy Protocols",
-    "VIT Vellore"
-  ],
-  authors: [{ name: "Meher Gayatri Devi Tiwari" }],
-  creator: "Meher Gayatri Devi Tiwari",
+  metadataBase: new URL(origin),
+  title: {
+    default: "Meher Gayatri Devi Tiwari | Academic & Cybersecurity Portfolio",
+    template: `%s | ${PUBLIC_ACADEMIC_IDENTITY.name}`,
+  },
+  description: rootSeo.description,
+  alternates: {
+    canonical: origin,
+  },
+  authors: [{ name: PUBLIC_ACADEMIC_IDENTITY.name, url: origin }],
+  creator: PUBLIC_ACADEMIC_IDENTITY.name,
+  publisher: PUBLIC_ACADEMIC_IDENTITY.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",
     apple: "/apple-icon.png",
   },
-  openGraph: {
-    title: "Meher Gayatri Devi Tiwari | Academic & Cybersecurity Portfolio",
-    description: "Assistant Professor at Woxsen University & Information Security Researcher. Advancing knowledge in cybersecurity, privacy, blockchain, and visual cryptography.",
-    type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Meher Gayatri Devi Tiwari - Academic Portfolio",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Meher Gayatri Devi Tiwari | Academic & Cybersecurity Portfolio",
-    description: "Assistant Professor at Woxsen University & Information Security Researcher.",
-    images: ["/images/og-image.jpg"],
-  },
+  openGraph: rootSeo.openGraph,
+  twitter: rootSeo.twitter,
 };
 
 export default function RootLayout({
@@ -52,6 +51,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = getPersonStructuredData();
+  const websiteSchema = getWebSiteStructuredData();
+
   return (
     <html lang="en" className="scroll-smooth light" data-scroll-behavior="smooth" style={{ colorScheme: "light" }}>
       <head>
@@ -61,6 +63,16 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap"
           rel="stylesheet"
+        />
+        {/* Structured Data: Person Schema (Verified Public Academic Details Only) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        {/* Structured Data: WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body id="top" className="bg-[#F8F6F0] text-[#292D2A] min-h-screen flex flex-col font-sans selection:bg-[#CBD7CE] selection:text-[#292D2A] antialiased">
