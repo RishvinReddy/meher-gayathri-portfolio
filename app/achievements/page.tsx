@@ -21,7 +21,6 @@ import {
   GraduationCap
 } from "lucide-react";
 import PageHeader from "@/components/ui/PageHeader";
-import PageNavigation from "@/components/ui/PageNavigation";
 import { 
   achievementsData, 
   achievementCategories, 
@@ -84,7 +83,6 @@ export default function AchievementsPage() {
             kicker="Academic Honors & Service"
             title="Academic Recognition, Leadership & Social Responsibility"
             subtitle="The verified record of collegiate technical honors, institutional student leadership positions, commercial program management milestones, and environmental & social responsibility initiatives of Meher Gayatri Devi Tiwari."
-            breadcrumbs={[{ label: "Achievements" }]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-2">
@@ -620,24 +618,6 @@ export default function AchievementsPage() {
             </div>
           </div>
         </section>
-
-        {/* =========================================================================
-            SECTION G: PAGE NAVIGATION
-        ========================================================================= */}
-        <div className="pt-8 border-t border-[#ECE6DC]">
-          <PageNavigation
-            prev={{
-              label: "Projects",
-              href: "/projects",
-              description: "5 verified academic and technical systems"
-            }}
-            next={{
-              label: "Contact",
-              href: "/contact",
-              description: "Official institutional correspondence & faculty office"
-            }}
-          />
-        </div>
 
       </div>
     </div>

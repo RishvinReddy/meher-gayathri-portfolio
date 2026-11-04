@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/Icons";
 import PageHeader from "@/components/ui/PageHeader";
-import PageNavigation from "@/components/ui/PageNavigation";
 import { profileData } from "@/content/profile";
 
 export default function ContactPage() {
@@ -81,7 +80,6 @@ export default function ContactPage() {
             kicker="Academic Correspondence"
             title="Academic Inquiries & Institutional Contact"
             subtitle="Direct communication channels for scholarly research collaborations, student academic advising, symposium invitations, and institutional matters with Meher Gayatri Devi Tiwari."
-            breadcrumbs={[{ label: "Contact" }]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-2">
@@ -603,24 +601,6 @@ export default function ContactPage() {
             </Link>
           </div>
         </section>
-
-        {/* =========================================================================
-            SECTION G: PAGE NAVIGATION
-        ========================================================================= */}
-        <div className="pt-8 border-t border-[#ECE6DC]">
-          <PageNavigation
-            prev={{
-              label: "Achievements",
-              href: "/achievements",
-              description: "Academic honors, collegiate awards & CSR leadership"
-            }}
-            next={{
-              label: "Home",
-              href: "/",
-              description: "Return to academic portfolio overview"
-            }}
-          />
-        </div>
 
       </div>
     </div>

@@ -64,17 +64,6 @@ export default function RootLayout({
         />
       </head>
       <body id="top" className="bg-[#F8F6F0] text-[#292D2A] min-h-screen flex flex-col font-sans selection:bg-[#CBD7CE] selection:text-[#292D2A] antialiased">
-        {/* Academic top status banner (Warm, understated, light-only) */}
-        <div className="bg-[#ECE6DC] text-[#4F5651] text-xs py-1.5 px-4 sm:px-6 lg:px-8 xl:px-12 border-b border-[#E0D7C9] font-medium tracking-wide">
-          <div className="max-w-[1440px] mx-auto text-center">
-            <span>Official Academic & Research Portfolio</span>
-            <span className="mx-2 opacity-50">·</span>
-            <span>Assistant Professor, Woxsen University</span>
-            <span className="mx-2 opacity-50">·</span>
-            <span className="text-[#3B5340] font-semibold">Ph.D. Scholar, VIT</span>
-          </div>
-        </div>
-
         <Navbar />
         
         <main className="flex-grow">

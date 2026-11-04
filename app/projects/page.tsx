@@ -23,7 +23,6 @@ import {
   Code2
 } from "lucide-react";
 import PageHeader from "@/components/ui/PageHeader";
-import PageNavigation from "@/components/ui/PageNavigation";
 import { projectsData, projectCategories, Project } from "@/content/projects";
 import { profileData } from "@/content/profile";
 
@@ -74,7 +73,6 @@ export default function ProjectsPage() {
             kicker="Academic & Technical Systems"
             title="Verified Academic Projects & Systems Engineering"
             subtitle="The verified technical implementations documented in Meher Gayatri Devi Tiwari's curriculum vitae — bridging empirical software prototypes with applied cryptography, blockchain distributed ledgers, IoT security, and defensive analysis."
-            breadcrumbs={[{ label: "Projects" }]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-2">
@@ -660,24 +658,6 @@ export default function ProjectsPage() {
             </div>
           </div>
         </section>
-
-        {/* =========================================================================
-            SECTION G: PAGE NAVIGATION
-        ========================================================================= */}
-        <div className="pt-8 border-t border-[#ECE6DC]">
-          <PageNavigation
-            prev={{
-              label: "Teaching",
-              href: "/teaching",
-              description: "University pedagogy, courses & student mentorship"
-            }}
-            next={{
-              label: "Achievements",
-              href: "/achievements",
-              description: "Academic honors, collegiate awards & CSR leadership"
-            }}
-          />
-        </div>
 
       </div>
     </div>

@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/Icons";
 import PageHeader from "@/components/ui/PageHeader";
-import PageNavigation from "@/components/ui/PageNavigation";
 import { profileData } from "@/content/profile";
 import { achievementsData } from "@/content/achievements";
 import { teachingData } from "@/content/teaching";
@@ -48,7 +47,6 @@ export default function AboutPage() {
             kicker="Academic Biography"
             title="About Meher Gayatri Devi Tiwari"
             subtitle="Assistant Professor in Information Technology & Cybersecurity at Woxsen University and Ph.D. Research Scholar at Vellore Institute of Technology."
-            breadcrumbs={[{ label: "About" }]}
           />
 
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -846,12 +844,6 @@ export default function AboutPage() {
             </span>
           </div>
         </section>
-
-        {/* Page Navigation */}
-        <PageNavigation
-          prev={{ label: "Home", href: "/", description: "Return to home page" }}
-          next={{ label: "Research", href: "/research", description: "Core research themes & domains" }}
-        />
 
       </div>
     </div>

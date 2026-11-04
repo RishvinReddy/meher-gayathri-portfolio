@@ -22,7 +22,6 @@ import {
   Sparkles
 } from "lucide-react";
 import PageHeader from "@/components/ui/PageHeader";
-import PageNavigation from "@/components/ui/PageNavigation";
 import { consolidatedThemes, researchMethodologies } from "@/content/research";
 import { projectsData } from "@/content/projects";
 import { publicationsNotice } from "@/content/publications";
@@ -49,7 +48,6 @@ export default function ResearchPage() {
             kicker="Research & Scholarship"
             title="Advancing Information Security, Cryptography & Decentralized Systems"
             subtitle="The scholarly agenda of Meher Gayatri Devi Tiwari — investigating applied cryptography, blockchain architectures, visual cryptography schemes, IoT security, and enterprise risk governance."
-            breadcrumbs={[{ label: "Research" }]}
           />
 
           {/* Academic Trajectory & Institutional Framing Strip */}
@@ -674,24 +672,6 @@ export default function ResearchPage() {
 
           </div>
         </section>
-
-        {/* =========================================================================
-            SECTION H: PAGE NAVIGATION
-        ========================================================================= */}
-        <div className="pt-8 border-t border-[#ECE6DC]">
-          <PageNavigation
-            prev={{
-              label: "About",
-              href: "/about",
-              description: "Academic biography, faculty experience & credentials"
-            }}
-            next={{
-              label: "Publications",
-              href: "/publications",
-              description: "Scholarly publications repository & review notice"
-            }}
-          />
-        </div>
 
       </div>
     </div>

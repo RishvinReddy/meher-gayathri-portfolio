@@ -24,7 +24,6 @@ import {
   ChevronUp
 } from "lucide-react";
 import PageHeader from "@/components/ui/PageHeader";
-import PageNavigation from "@/components/ui/PageNavigation";
 import { 
   publicationsData, 
   publicationCategories, 
@@ -95,7 +94,6 @@ export default function PublicationsPage() {
             kicker="Publications & Scholarship"
             title="Scholarly Publications & Research Output"
             subtitle="Peer-reviewed journal contributions, conference proceedings, and scholarly manuscripts authored by Meher Gayatri Devi Tiwari across Information Security, Cryptography, Blockchain, and Privacy."
-            breadcrumbs={[{ label: "Publications" }]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-2">
@@ -755,24 +753,6 @@ export default function PublicationsPage() {
             </div>
           </div>
         </section>
-
-        {/* =========================================================================
-            SECTION H: PAGE NAVIGATION
-        ========================================================================= */}
-        <div className="pt-8 border-t border-[#ECE6DC]">
-          <PageNavigation
-            prev={{
-              label: "Research",
-              href: "/research",
-              description: "Scholarly themes, methodologies & doctoral agenda"
-            }}
-            next={{
-              label: "Teaching",
-              href: "/teaching",
-              description: "University pedagogy, courses & student mentorship"
-            }}
-          />
-        </div>
 
       </div>
     </div>

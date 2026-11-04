@@ -24,7 +24,6 @@ import {
   FolderGit2
 } from "lucide-react";
 import PageHeader from "@/components/ui/PageHeader";
-import PageNavigation from "@/components/ui/PageNavigation";
 import { teachingData } from "@/content/teaching";
 import { profileData } from "@/content/profile";
 
@@ -46,7 +45,6 @@ export default function TeachingPage() {
             kicker="Teaching & Academic Practice"
             title="University Instruction, Student Mentorship & Academic Development"
             subtitle="The academic teaching portfolio of Meher Gayatri Devi Tiwari — over 5 years of higher education experience delivering undergraduate and postgraduate courses in Information Technology and Cybersecurity, supervising student capstone projects, and enriching academic curricula."
-            breadcrumbs={[{ label: "Teaching" }]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-2">
@@ -714,24 +712,6 @@ export default function TeachingPage() {
             </div>
           </div>
         </section>
-
-        {/* =========================================================================
-            SECTION J: PAGE NAVIGATION
-        ========================================================================= */}
-        <div className="pt-8 border-t border-[#ECE6DC]">
-          <PageNavigation
-            prev={{
-              label: "Publications",
-              href: "/publications",
-              description: "Scholarly publications repository & review notice"
-            }}
-            next={{
-              label: "Projects",
-              href: "/projects",
-              description: "5 verified academic and technical engineering projects"
-            }}
-          />
-        </div>
 
       </div>
     </div>
