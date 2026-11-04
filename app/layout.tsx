@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mehergayatritiwari.academic"),
   title: "Meher Gayatri Devi Tiwari | Academic & Cybersecurity Portfolio",
   description: "Academic Portfolio of Meher Gayatri Devi Tiwari — Assistant Professor at Woxsen University, Information Security Researcher, Cybersecurity & GRC Professional.",
   keywords: [
@@ -19,11 +20,30 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Meher Gayatri Devi Tiwari" }],
   creator: "Meher Gayatri Devi Tiwari",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Meher Gayatri Devi Tiwari | Academic & Cybersecurity Portfolio",
     description: "Assistant Professor at Woxsen University & Information Security Researcher. Advancing knowledge in cybersecurity, privacy, blockchain, and visual cryptography.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Meher Gayatri Devi Tiwari - Academic Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meher Gayatri Devi Tiwari | Academic & Cybersecurity Portfolio",
+    description: "Assistant Professor at Woxsen University & Information Security Researcher.",
+    images: ["/images/og-image.jpg"],
   },
 };
 

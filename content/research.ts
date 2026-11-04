@@ -78,3 +78,4 @@ export const researchThemes: ResearchTheme[] = [
     impact: "Strengthens institutional defenses through holistic, human-centered governance, proactive auditing, and structured compliance frameworks."
   }
 ];
+

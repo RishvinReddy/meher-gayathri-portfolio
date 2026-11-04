@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, ExternalLink, ShieldCheck, BookOpen, GraduationCap, ArrowUpRight } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/Icons";
 import { profileData } from "@/content/profile";
@@ -13,8 +14,14 @@ export default function Footer() {
           {/* Identity & Scholar Statement */}
           <div className="space-y-4 lg:col-span-1">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded border border-[#849987] bg-[#EBF0EC] flex items-center justify-center font-serif font-bold text-sm text-[#292D2A]">
-                M
+              <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#849987] bg-[#EBF0EC] shrink-0">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Meher Gayatri Devi Tiwari"
+                  fill
+                  sizes="32px"
+                  className="object-cover"
+                />
               </div>
               <span className="font-serif text-lg font-bold tracking-tight text-[#292D2A]">
                 Meher Gayatri Devi Tiwari

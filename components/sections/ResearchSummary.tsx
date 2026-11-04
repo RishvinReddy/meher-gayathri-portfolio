@@ -107,3 +107,4 @@ export default function ResearchSummary() {
     </section>
   );
 }
+

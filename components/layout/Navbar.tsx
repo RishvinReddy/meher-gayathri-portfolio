@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ShieldCheck, Mail, ArrowUpRight } from "lucide-react";
 
@@ -49,8 +50,14 @@ export default function Navbar() {
             href="/"
             className="group flex items-center space-x-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#849987] rounded-sm py-1"
           >
-            <div className="w-10 h-10 rounded border border-[#849987]/40 bg-[#FAF8F3] flex items-center justify-center text-[#292D2A] font-serif font-bold text-lg shadow-2xs group-hover:border-[#849987] group-hover:bg-[#EBF0EC] transition-colors">
-              M
+            <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#849987] bg-[#EBF0EC] shrink-0 shadow-2xs group-hover:ring-2 group-hover:ring-[#849987]/50 transition-all">
+              <Image
+                src="/images/profile.jpg"
+                alt="Meher Gayatri Devi Tiwari"
+                fill
+                sizes="40px"
+                className="object-cover"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-lg sm:text-xl font-semibold text-[#292D2A] tracking-tight group-hover:text-[#5B7260] transition-colors">
@@ -145,3 +152,4 @@ export default function Navbar() {
     </header>
   );
 }
+

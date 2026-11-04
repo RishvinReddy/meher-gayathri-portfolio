@@ -80,3 +80,4 @@ This portfolio is static-first, requiring no database, credentials, or runtime s
    - **Build Command**: `npm run build`
    - **Output Directory**: Default (`.next`)
 4. Connect custom domain (e.g. `mehergayatritiwari.com` or institutional subdomain).
+

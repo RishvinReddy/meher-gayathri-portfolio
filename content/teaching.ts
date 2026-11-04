@@ -116,3 +116,4 @@ export const teachingData = {
     }
   ] as MentorshipArea[]
 };
+

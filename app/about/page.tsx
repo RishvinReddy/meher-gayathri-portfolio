@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   GraduationCap, 
   Briefcase, 
@@ -64,10 +65,17 @@ export default function AboutPage() {
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-4 space-y-6">
             <div className="bg-[#FAF8F3] border border-[#E2DBD0] rounded-xl p-6 space-y-4">
-              <div className="w-16 h-16 rounded-xl bg-[#EBF0EC] border border-[#CBD7CE] flex items-center justify-center font-serif text-3xl font-bold text-[#292D2A]">
-                MG
+              <div className="relative w-28 h-28 mx-auto rounded-2xl overflow-hidden border-2 border-[#849987] shadow-sm bg-[#EBF0EC]">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Meher Gayatri Devi Tiwari"
+                  fill
+                  sizes="112px"
+                  className="object-cover"
+                  priority
+                />
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <h3 className="font-serif text-2xl font-bold text-[#292D2A]">
                   Meher Gayatri Devi Tiwari
                 </h3>
@@ -348,3 +356,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

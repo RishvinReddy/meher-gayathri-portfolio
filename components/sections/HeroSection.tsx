@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, BookOpen, Shield, GraduationCap, MapPin, Mail, Award, CheckCircle2 } from "lucide-react";
 import { profileData } from "@/content/profile";
 
@@ -98,16 +99,26 @@ export default function HeroSection() {
               
               {/* Header with Monogram and Verified Status */}
               <div className="flex items-start justify-between border-b border-[#E8E1D5] pb-5">
-                <div className="flex items-center space-x-3.5">
-                  <div className="w-14 h-14 rounded-lg bg-[#EBF0EC] border border-[#CBD7CE] flex items-center justify-center text-[#292D2A] font-serif font-bold text-2xl shadow-inner">
-                    MG
+                <div className="flex items-center space-x-4">
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 border-[#849987] shadow-sm shrink-0 bg-[#EBF0EC]">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt="Meher Gayatri Devi Tiwari"
+                      fill
+                      sizes="(max-width: 640px) 64px, 80px"
+                      className="object-cover"
+                      priority
+                    />
                   </div>
                   <div>
-                    <h2 className="font-serif text-lg font-bold text-[#292D2A] leading-snug">
+                    <h2 className="font-serif text-lg sm:text-xl font-bold text-[#292D2A] leading-snug">
                       Meher Gayatri Devi Tiwari
                     </h2>
                     <p className="text-xs text-[#575E59]">
                       M.Tech (InfoSec) · Ph.D. Scholar
+                    </p>
+                    <p className="text-[11px] text-[#5B7260] font-medium mt-0.5">
+                      Assistant Professor · Woxsen University
                     </p>
                   </div>
                 </div>
@@ -194,3 +205,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
