@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-ivory: #F8F6F0;
+    --bg-ivory-light: #FDFAF5;
+    --bg-sand: #E8E1D5;
+    --bg-sand-light: #F4EFE6;
+    --bg-sand-card: #FAF8F3;
+    
+    --text-charcoal: #292D2A;
+    --text-charcoal-muted: #575E59;
+    --text-charcoal-light: #7E8580;
+    
+    --accent-sage: #849987;
+    --accent-sage-dark: #5B7260;
+    --accent-sage-light: #EBF0EC;
+    --accent-sage-border: #CBD7CE;
+    
+    --border-warm: #E2DBD0;
+    --border-delicate: #ECE6DC;
+
+    --font-serif: "Newsreader", "Charter", "Cormorant Garamond", Georgia, serif;
+    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-ivory);
+    color: var(--text-charcoal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  ::selection {
+    background-color: #DDE5E0;
+    color: #292D2A;
+  }
+}
+
+/* Editorial typography utilities */
+.font-serif-title {
+  font-family: var(--font-serif), "Newsreader", "Playfair Display", Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+.editorial-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4CBBC 20%, #D4CBBC 80%, transparent);
+}
+
+.editorial-card {
+  background: #FAF8F4;
+  border: 1px solid #E8E1D5;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: #849987;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -8px rgba(41, 45, 42, 0.05);
+}
+
+.editorial-badge {
+  background-color: #EBF0EC;
+  color: #3B5340;
+  border: 1px solid #D1DDD3;
+}
