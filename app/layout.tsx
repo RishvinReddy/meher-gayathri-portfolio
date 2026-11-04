@@ -63,7 +63,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#F8F6F0] text-[#292D2A] min-h-screen flex flex-col font-sans selection:bg-[#CBD7CE] selection:text-[#292D2A] antialiased">
+      <body id="top" className="bg-[#F8F6F0] text-[#292D2A] min-h-screen flex flex-col font-sans selection:bg-[#CBD7CE] selection:text-[#292D2A] antialiased">
         {/* Academic top status banner (Warm, understated, light-only) */}
         <div className="bg-[#ECE6DC] text-[#4F5651] text-xs py-1.5 px-4 text-center border-b border-[#E0D7C9] font-medium tracking-wide">
           <span>Official Academic & Research Portfolio</span>

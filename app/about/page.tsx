@@ -63,6 +63,7 @@ export default function AboutPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
                     className="object-cover object-top"
                     priority
+                    loading="eager"
                   />
                 </div>
                 <div className="pt-3 px-1 flex items-center justify-between text-xs text-[#7E8580]">
